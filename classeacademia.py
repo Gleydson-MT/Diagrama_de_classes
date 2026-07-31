@@ -1,9 +1,11 @@
 class Aluno:
-    def __init__(self, matricula:(int), nome:(str), altura:(float), peso:(float)):
+    def __init__(self, matricula:int, nome:str, altura:float, peso:float):
         self.matricula = matricula
         self.nome = nome
         self.altura = altura
         self.peso = peso
+        self.plano = plano
+        self.treinos = []
 
     def calcular_imc(self: (float)):
 
@@ -13,18 +15,20 @@ class Aluno:
         self.peso = novo_peso
 
 
-aluno = Aluno(1001, "Thiago", 1.75, 80.0)
-
-
-class PlanoAssinatura:
-    def __init__(self, plano, mensalidade, meses):
+class Plano:
+    def __init__(self, plano:(str), valor_mensalidade:(float), duracao_meses:(int)):
         self.plano = plano
-        self.mensalidade = mensalidade
-        self.meses = meses
+        self.valor_mensalidade = valor_mensalidade
+        self.duracao_meses = duracao_meses
 
     def reajuste(self, percentual:(float)):
-        self.percentual = percentual
-        return self.mensalidade * self.percentual
+        self.valor_mensalidade = self.valor_mensalidade * (1 + percentual / 100)
+
+plano = Plano("Básico", 150, 12)
+
+plano.reajuste(10)
+
+print(plano.mensalidade)
 
 
 # class Treino:
