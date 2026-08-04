@@ -25,5 +25,3 @@ class Agendamento:
 
 
         cliente.agendamentos.append(self)
-
-    def resumo (self):
