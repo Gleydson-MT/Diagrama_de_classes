@@ -1,9 +1,13 @@
-# class Produto:
-#     def __init__(self, nome, preco):
-#         self.nome = nome
-#         self.preco = preco
-#     def aplicar_desconto(self, pct):
+class Produto:
+    def __init__(self, nome, preco):
+        self.nome = nome
+        self.preco = preco
+    def aplicar_desconto(self, pct):
+        self.preco = self.preco - self.preco * pct / 100 # tira pct por cento
 
+teclado = Produto("Teclado", 100)
+teclado.aplicar_desconto(10)
+print("Ex4", teclado.preco) #
 
 class ContaBancaria:
     def __init__(self):
@@ -19,7 +23,7 @@ class ContaBancaria:
 conta = ContaBancaria()
 conta.depositar(50)
 conta.sacar(20)
-print("Exs",conta)
+print("Exs",conta.saldo) #
 
 
 class Aluno:
