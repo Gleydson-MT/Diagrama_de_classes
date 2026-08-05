@@ -36,21 +36,7 @@ class ContaBancaria:
     def ver_saldo(self):
         print(f"Saldo atual: R$ {self.__saldo:.2f}")
 
-class Aluno:
-    def __init__(self, nome, nota: float):
-        self.nome = nome
-        self.nota = nota
-        self.medias = []
-
-    def adicionar_nota(self, n1: float, n2: float, n3: float, n4: float):
-        self.n1 = n1
-        self.n2 = n2
-        self.n3 = n3
-        self.n4 = n4
-        soma_das_notas = (n1 + n2 + n3+ n4)
-
-    # def media(self):
-    #     # Minha dúvida aqui seria se devo por "(self, media)", ou se apenas deixo como está e sigo para a divisão.
+        
 
 
 
