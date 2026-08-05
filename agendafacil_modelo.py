@@ -4,14 +4,13 @@ class Cliente:
         self.telefone = telefone
         self.agendamentos = []
 
-        def __str__(self):
-            return self.nome
+    def __str__(self):
+        return self.nome
 
 
-class Servicos:
-    def __init__(self, nome, duracao_min, preco):
+class Servico:
+    def __init__(self, nome, preco):
         self.nome = nome
-        self.duracao_min = duracao_min
         self.preco = preco
 
     def __str__(self):
@@ -19,9 +18,15 @@ class Servicos:
 
 class Agendamento:
     def __init__(self, cliente, servico, data_hora):
-        self.nome = cliente
+        self.cliente = cliente
         self.servico = servico
         self.data_hora = data_hora
 
+    def resumo(self):
+        return (f"{self.data_hora} | {self.cliente} | "
+                f"{self.servico.nome} | R$ {self.servico.preco:.2f}")
 
-        cliente.agendamentos.append(self)
+ana = Cliente("Ana", "85 99999-9999")
+corte = Servico("Corte", 35.00)
+ag = Agendamento(ana, corte, "12/08 09:00")
+print("Ex10:", ag.resumo())

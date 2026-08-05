@@ -36,6 +36,12 @@ class ContaBancaria:
     def ver_saldo(self):
         print(f"Saldo atual: R$ {self.__saldo:.2f}")
 
+
+class Aluno:
+    def __init__(self, nome):
+        self.nome = nome
+        self.notas = []
+        pass
         
 
 
