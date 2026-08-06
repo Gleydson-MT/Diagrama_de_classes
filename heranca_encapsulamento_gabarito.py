@@ -43,4 +43,4 @@ class Profisional(Pessoa):
 
 c=Cliente("Ana", "85 99999-9999")
 p=Profisional("Bruno", "85 99999-9999", "Cabeleleiro")
-p=Profisional
+print("B:", c.nome, "-", p.nome, "-", p.especializacao)
